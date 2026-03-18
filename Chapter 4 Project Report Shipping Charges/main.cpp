@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>  // for the ceil function
+#include <iomanip>
 
 using namespace std;
 
@@ -37,4 +38,11 @@ int main() {
 
 		// Calculate distance factor
 			scalefactor = static_cast<int>(ceil(distance / 500.0));
+
+		// Calculate the total cost
+			cost = rate * scalefactor;
+
+		// Display the total shipping cost
+			cout << fixed << setprecision(2); // Set precision for currency format
+			cout << "The total shipping cost is: $" << cost << endl;
 	}
