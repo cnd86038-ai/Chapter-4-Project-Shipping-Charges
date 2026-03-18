@@ -25,4 +25,13 @@ int main() {
 		cout << "Invalid distance. Please enter a distance between 10 and 3000 miles." << endl;
 		return 1; // Exit with an error code
 
+		// Determine the rate based on the weight
+		if (weight <= 2) {
+			rate = 1.10;
+		} else if (weight <= 6) {
+			rate = 2.20;
+		} else if (weight <= 10) {
+			rate = 3.70;
+		} else {
+			rate = 4.80;
 	}
