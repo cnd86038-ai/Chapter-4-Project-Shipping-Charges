@@ -34,4 +34,7 @@ int main() {
 			rate = 3.70;
 		} else {
 			rate = 4.80;
+
+		// Calculate distance factor
+			scalefactor = static_cast<int>(ceil(distance / 500.0));
 	}
