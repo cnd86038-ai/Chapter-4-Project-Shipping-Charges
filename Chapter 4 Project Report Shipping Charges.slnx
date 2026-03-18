@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Chapter 4 Project Report Shipping Charges/Chapter 4 Project Report Shipping Charges.vcxproj" />
+</Solution>
