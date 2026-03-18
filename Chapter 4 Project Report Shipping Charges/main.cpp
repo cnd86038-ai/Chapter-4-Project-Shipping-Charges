@@ -16,6 +16,7 @@ int main() {
 	if (weight <= 0 || weight > 20) {
 		cout << "Invalid weight. Please enter a weight between 0 and 20 kg." << endl;
 		return 1; // Exit with an error code
+	} // <-- Added closing brace for weight validation
 
 	// Get the distance to be shipped from the user
 	cout << "Enter the distance to be shipped (miles): ";
@@ -25,24 +26,28 @@ int main() {
 	if (distance <= 10 || distance > 3000) {
 		cout << "Invalid distance. Please enter a distance between 10 and 3000 miles." << endl;
 		return 1; // Exit with an error code
+	} // <-- Added closing brace for distance validation
 
-		// Determine the rate based on the weight
-		if (weight <= 2) {
-			rate = 1.10;
-		} else if (weight <= 6) {
-			rate = 2.20;
-		} else if (weight <= 10) {
-			rate = 3.70;
-		} else {
-			rate = 4.80;
+	// Determine the rate based on the weight
+	if (weight <= 2) {
+		rate = 1.10;
+	} else if (weight <= 6) {
+		rate = 2.20;
+	} else if (weight <= 10) {
+		rate = 3.70;
+	} else {
+		rate = 4.80;
+	} // <-- Added closing brace for rate determination
 
-		// Calculate distance factor
-			scalefactor = static_cast<int>(ceil(distance / 500.0));
+	// Calculate distance factor
+	scalefactor = static_cast<int>(ceil(distance / 500.0));
 
-		// Calculate the total cost
-			cost = rate * scalefactor;
+	// Calculate the total cost
+	cost = rate * scalefactor;
 
-		// Display the total shipping cost
-			cout << fixed << setprecision(2); // Set precision for currency format
-			cout << "The total shipping cost is: $" << cost << endl;
-	}
+	// Display the total shipping cost
+	cout << fixed << setprecision(2); // Set precision for currency format
+	cout << "The total shipping cost is: $" << cost << endl;
+
+	return 0; // Added return for successful completion
+}
