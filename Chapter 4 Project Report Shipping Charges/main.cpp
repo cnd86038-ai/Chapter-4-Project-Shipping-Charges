@@ -10,4 +10,19 @@ int main() {
 	// Get the weight of the package from the user
 	cout << "Enter the weight of the package (kg): ";
 	cin >> weight;
+
+	// Input validation for weight
+	if (weight <= 0 || weight > 20) {
+		cout << "Invalid weight. Please enter a weight between 0 and 20 kg." << endl;
+		return 1; // Exit with an error code
+
+	// Get the distance to be shipped from the user
+	cout << "Enter the distance to be shipped (miles): ";
+	cin >> distance;
+
+	// Input validation for distance
+	if (distance <= 10 || distance > 3000) {
+		cout << "Invalid distance. Please enter a distance between 10 and 3000 miles." << endl;
+		return 1; // Exit with an error code
+
 	}
